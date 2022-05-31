@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Order Hub</title>
+    <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+    <section data-position="header">
+        <h1>ERIN KITCHEN</h1>
+    </section>
+
+    <section data-position="add-meat">
+        <h2> Poultry</h2>
+        <select name="ddl" size=4 multiple>
+            <option value="" selected>
+            <option>
+            <option value="fish">Fish
+            <option value="chicken">Chicken</option>
+            <option value="beef">Beef</option>
+
+            <select>
+    </section>
+    <section data-position="add-side">
+        <form>
+            <ul>
+                <h2> Flavors</h2>
+                <li>coconut</li>
+                <li>curry </li>
+                <li> stew </li>
+            </ul>
+        </form>
+    </section>
+    <section data-position="add-flavor">
+
+        <ul>
+            <h2>Sides</h2>
+            <li>Rice and beans /Biscuit</li>
+            <li> Mashed Potatos /Aspargus</li>
+            <li>Cabbage and Plantains</li>
+        </ul>
+        </form>
+
+    </section>
+    <section data-position="orders">
+        <div>Meals</div>
+        <ul>
+            <% for(var i=0; i < quotes.length; i++) {%>
+                <li class="quote">
+                    <span>
+                        <%= quotes[i].name %>
+                    </span>:
+                    <span>
+                        <%= quotes[i].quote %>
+                    </span>
+                </li>
+                <% } %>
+
+        </ul>
+
+
+    </section>
+</body>
+
+</html>

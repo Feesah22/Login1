@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <title>Erin Eat</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> YOUR ORDER</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+
+        <section data-position="add-meat">
+          <form action="/messages" method="Post">
+          <h2> Poultry</h2>
+          <label name="ddl" >
+            <input type="checkbox" value="fish">Fish <span class="amount">5</span></input>
+            <input type="checkbox" value="chicken">Chicken <span class="amount">5</span></input>
+            <input type="checkbox" value="beef">Beef <span class="amount">5</span></input>
+            </label>
+          <form>
+           
+        </section>
+
+        <section data-position="add-side">
+          <form action="/messages" method="Post">
+            <ul>
+              <h2> Flavor</h2>
+              <label name="ddl">
+                <input type="checkbox" value="coconut">coconut </input>
+                <input type="checkbox" value="curry">curry</input>
+                <input type="checkbox" value="bbq">BBQ </input>
+                <input type="checkbox" value="jerk">Jerk </input>
+                <input type="checkbox" value="bourbon">Bourbon </input>
+                   
+              </label>
+            </ul>
+          </form>
+        </section>
+
+        <section data-position="add-flavor">
+
+          <form action="/messages" method="Post">
+            <h2> Sides</h2>
+            <label name="ddl">
+              <input type="checkbox" value="RiceBeans">Rice and Beans <span class="amount">3</span></input>
+              <input type="checkbox" value="MashedP">Mashed Potatos n <span class="amount">3</span></input>
+              <input type="checkbox" value="Asparagus">Asparagus <span class="amount">3</span></input>
+              <input type="checkbox" value="MixedVeg">Mixed Vegatables <span class="amount">3</span></input>
+              <input type="checkbox" value="Cabbage">Cabbage<span class="amount">3</span></input>
+              <input type="checkbox" value="Plantains">Plantains <span class="amount">3</span></input>
+              <input type="checkbox" value="Cornbread">Corn Bread <span class="amount">2</span></input>
+            </label>
+          </form>
+
+          
+          
+            <h2>Add a message</h2>
+            <% if (user.local.email) { %>
+              <form action="/messages" method="POST">
+                <input type="text" value="<%= user.local.email %>" name="name">
+                <input type="text" placeholder="message" name="msg">
+                <button type="submit">Submit</button>
+              </form>
+          </div>
+          <% } %>
+        
+       
+<script src="main.js"></script>
+
+</body>
+</html>
