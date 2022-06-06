@@ -1,13 +1,13 @@
-## Installation
+## Food Login page 
 
-1. Clone repo
-2. run `npm install`
 
-## Usage
+## Used HTMLS, CSS , JAvaScript , MongoDB , Node.js
 
-1. run `node server.js`
-2. Navigate to `localhost:8080`
+#Used A login to order food from a location . It helps get meet , sides, drink for a barista or a food service. 
 
-## Credit
 
-Modified from Scotch.io's auth tutorial
+
+
+
+
+![Screen Shot 2022-06-05 at 10 19 14 PM](https://user-images.githubusercontent.com/101997718/172084063-65206928-4595-493d-b921-bafee4613c10.png)
